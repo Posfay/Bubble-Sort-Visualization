@@ -28,7 +28,12 @@ function setup() {
   LINE_HEIGHT_STEP = height / LENGTH;
 
   for (let i = 0; i < LENGTH; i++) {
-    arr[i] = floor(random() * LENGTH);
+    arr[i] = i + 1;
+  }
+
+  shuffle(arr, true);
+
+  for (let i = 0; i < LENGTH; i++) {
     arrCopy[i] = arr[i];
   }
 }
@@ -60,8 +65,9 @@ function btnPressed() {
   actionsB = [];
   actionsJ = [];
 
+  shuffle(arr, true);
+
   for (let i = 0; i < LENGTH; i++) {
-    arr[i] = floor(random() * LENGTH);
     arrCopy[i] = arr[i];
   }
 }
